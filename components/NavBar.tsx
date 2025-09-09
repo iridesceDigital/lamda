@@ -65,7 +65,7 @@ const NavBar = () => {
           <Link className="cursor-pointer" href="/">
             <Image
               priority
-              src="/lamda-logo.png"
+              src="/Logo.png"
               alt="Logo"
               width={100}
               height={100}
