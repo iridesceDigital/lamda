@@ -1,4 +1,5 @@
 import { projects } from "@/lib/content";
+import Link from "next/link";
 
 export default function PortfolioPage() {
   return (
@@ -9,14 +10,15 @@ export default function PortfolioPage() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {projects.map((p) => (
-            <div key={p.slug} className="group rounded-xl overflow-hidden border border-white/10 bg-black">
+            <Link key={p.slug} href={`/portfolio/${p.slug}`} className="group rounded-xl overflow-hidden border border-white/10 bg-black">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={p.image} alt={p.title} className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="p-4">
                 <h3 className="text-lg font-semibold">{p.title}</h3>
                 <p className="text-sm text-neutral-300 mt-1">{p.category}</p>
+                <span className="inline-block mt-2 text-[#CFAA4E] underline">View project</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -8,7 +8,7 @@ export default function ServicesPage() {
         <h1 className="text-3xl md:text-5xl font-semibold">Services</h1>
         <p className="mt-4 text-neutral-300 max-w-2xl">Explore our full range of integrated architectural and engineering services.</p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-10">
           {services.map((s) => (
             <Link key={s.slug} href={`/services/${s.slug}`} className="group rounded-xl overflow-hidden border border-white/10 bg-black">
               {/* eslint-disable-next-line @next/next/no-img-element */}

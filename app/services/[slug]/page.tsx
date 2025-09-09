@@ -11,7 +11,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
   if (!service) return <div className="pt-32 px-6">Not found</div>;
 
   return (
-    <main className="bg-[#1B1B1B] pt-32 pb-20">
+    <main className="bg-[#1B1B1B] pt-40 md:pt-48 pb-20">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={service.image} alt={service.title} className="w-full h-80 object-cover rounded-xl" />

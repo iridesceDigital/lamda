@@ -1,14 +1,29 @@
 import { Spotlight } from "@/components/ui/spotlight";
 import Link from "next/link";
 import Services from "./services";
+import { Star, House, BadgeCheck } from "lucide-react";
+import { Accordion } from "@/components/ui/accordion";
 
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
       {/* Hero */}
-      <section className="min-h-screen flex items-center bg-[#1B1B1B] pt-28">
+      <section
+        className="relative min-h-screen flex items-center pt-28 overflow-hidden"
+        style={{
+          backgroundImage: 'url(/Hero.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#1B1B1B',
+        }}
+      >
         <Spotlight className="md:flex md:-top-80 left-80" fill="#CFAA4E" />
-        <div className="max-w-6xl mx-auto px-6 w-full">
+        {/* Fade-out overlay into site background */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1B1B1B]/0 to-[#1B1B1B]" />
+        </div>
+        <div className="max-w-6xl mx-auto px-6 w-full relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-semibold text-white">
               Lamda Building Design
@@ -27,7 +42,7 @@ export default function Home() {
 
       {/* About split section */}
       <section className="bg-[#1B1B1B]">
-        <div className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-10 items-center">
           <img src="/images/L1.jpg" alt="Lamda studio" className="w-full h-72 md:h-96 object-cover rounded-xl" />
           <div>
             <h2 className="text-2xl md:text-4xl font-semibold text-white">Integrated Architecture + Engineering</h2>
@@ -42,9 +57,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Key stats row */}
+      <section className="bg-[#1B1B1B] pt-20">
+        <div className="max-w-6xl mx-auto px-6 pb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center text-center gap-3 rounded-2xl border border-white/10 bg-black/50 p-8">
+              <div className="p-4 rounded-xl bg-[#CFAA4E]/15 text-[#CFAA4E]">
+                <Star className="w-14 h-14" />
+              </div>
+              <p className="text-2xl md:text-3xl font-semibold text-white">Statistic 1</p>
+              <p className="text-base md:text-lg text-neutral-300">Reviews</p>
+            </div>
+            <div className="flex flex-col items-center text-center gap-3 rounded-2xl border border-white/10 bg-black/50 p-8">
+              <div className="p-4 rounded-xl bg-[#CFAA4E]/15 text-[#CFAA4E]">
+                <House className="w-14 h-14" />
+              </div>
+              <p className="text-2xl md:text-3xl font-semibold text-white">Statistic 2</p>
+              <p className="text-base md:text-lg text-neutral-300">Homes</p>
+            </div>
+            <div className="flex flex-col items-center text-center gap-3 rounded-2xl border border-white/10 bg-black/50 p-8">
+              <div className="p-4 rounded-xl bg-[#CFAA4E]/15 text-[#CFAA4E]">
+                <BadgeCheck className="w-14 h-14" />
+              </div>
+              <p className="text-2xl md:text-3xl font-semibold text-white">Statistic 3</p>
+              <p className="text-base md:text-lg text-neutral-300">Verified</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services preview grid */}
-      <section className="bg-[#1B1B1B]">
+  <section className="bg-[#1B1B1B] py-8">
         <Services />
+      </section>
+
+      {/* FAQ */}
+  <section className="bg-[#1B1B1B] pt-16 pb-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-2xl md:text-4xl font-semibold text-white">FAQ</h2>
+          <p className="mt-3 text-neutral-300 max-w-2xl">Answers to common questions about process, timelines, and working with us.</p>
+          <div className="mt-8">
+            <Accordion
+              items={[
+                {
+                  question: "Do you handle both planning and building regulations?",
+                  answer:
+                    "Yes. We manage planning applications and provide building regulations drawings/specifications, coordinating with local authorities and approved inspectors.",
+                },
+                {
+                  question: "How long does a typical project take?",
+                  answer:
+                    "Timeframes vary by scope. Planning can take 8–12 weeks depending on the authority. Technical design typically follows over 2–6 weeks. We’ll outline a tailored programme at kickoff.",
+                },
+                {
+                  question: "Can you provide structural calculations only?",
+                  answer:
+                    "Absolutely. We often support homeowners, contractors and architects with standalone structural calculations and details for building control and construction.",
+                },
+                {
+                  question: "Do you work nationwide?",
+                  answer:
+                    "We’re based in the UK and work remotely nationwide. For site visits, we’ll confirm travel feasibility and costs up front.",
+                },
+              ]}
+            />
+          </div>
+        </div>
       </section>
     </main>
   );
