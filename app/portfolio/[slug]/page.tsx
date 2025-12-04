@@ -18,7 +18,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         )}
 
         {project.gallery && project.gallery.length > 0 && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
             {project.gallery.map((src, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img key={i} src={src} alt={`${project.title} ${i + 1}`} className="w-full h-56 object-cover rounded-xl" />

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedin} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold">Lamda Building Design</h3>
           <p className="text-sm text-neutral-300 mt-2">
-            Smarter design through integrated architecture & engineering.
+            Smarter design through integrated architectural building design and engineering.
           </p>
         </div>
         <div>
@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3 text-white">
               <a
-                href="https://www.facebook.com/lamdabuildingdesign"
+                href="https://www.facebook.com/profile.php?id=61583466672026&sk=about"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Lamda on Facebook"
@@ -48,7 +48,7 @@ export default function Footer() {
                 <FaFacebookF className="w-4 h-4" />
               </a>
               <a
-                href="https://www.instagram.com/lamdabuildingdesign"
+                href="https://www.instagram.com/lamdabuildingdesign/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Lamda on Instagram"
@@ -56,6 +56,16 @@ export default function Footer() {
                 title="Instagram"
               >
                 <FaInstagram className="w-4 h-4" />
+              </a>
+               <a
+                href="https://www.linkedin.com/company/lamda-building-design-ltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Lamda on Facebook"
+                className="p-2 rounded-full hover:bg-white/10 transition-colors"
+                title="Facebook"
+              >
+                <FaLinkedin className="w-4 h-4" />
               </a>
             </div>
             <div className="hidden md:flex items-center gap-4">

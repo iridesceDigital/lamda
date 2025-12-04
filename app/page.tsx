@@ -3,6 +3,7 @@ import Link from "next/link";
 import Services from "./services";
 import { Star, House, BadgeCheck } from "lucide-react";
 import { Accordion } from "@/components/ui/accordion";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -24,12 +25,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1B1B1B]/0 to-[#1B1B1B]" />
         </div>
         <div className="max-w-6xl mx-auto px-6 w-full relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-semibold text-white">
-              Lamda Building Design
+          <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+              Integrated Building Design and Structural Engineering 
             </h1>
             <p className="mt-6 text-neutral-300 leading-relaxed">
-              Experience a smarter design process. By merging architecture and structural engineering, we provide homeowners, developers, and contractors with a single, comprehensive solution that streamlines projects and reduces costs. Let&apos;s build your vision together.
+              Experience a smarter design process. By merging architectural building design and structural engineering, we provide homeowners, developers, and contractors with a single, comprehensive solution that streamlines projects and reduces costs.  Alternatively, we carry can work with others to produce individual packages.  Let's build your vision together.
             </p>
             <Link href="/contact" className="inline-block mt-8">
               <button className="px-6 py-3 rounded-md bg-[#CFAA4E] text-black font-medium hover:bg-[#c29b3c] transition-colors">
@@ -57,7 +58,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key stats row */}
+      {/* Key stats row 
       <section className="bg-[#1B1B1B] pt-20">
         <div className="max-w-6xl mx-auto px-6 pb-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -85,6 +86,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Services preview grid */}
   <section className="bg-[#1B1B1B] py-8">

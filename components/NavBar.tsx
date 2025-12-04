@@ -36,10 +36,10 @@ const NavBar = () => {
             <Link className="cursor-pointer" href="/">
               <Image
                 priority
-                src="/Logo.png"
+                src="/Nav_Logo.png"
                 alt="Logo"
-                width={100}
-                height={100}
+                width={120}
+                height={120}
                 className="w-10 h-10 md:w-14 md:h-14"
               />
             </Link>
