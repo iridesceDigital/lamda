@@ -17,9 +17,9 @@ export default function ContactPage() {
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error("Failed");
-  setStatus("Thanks, we\'ll be in touch shortly.");
+  setStatus("Thanks, we&apos;ll be in touch shortly.");
       e.currentTarget.reset();
-    } catch (err) {
+    } catch {
       setStatus("There was a problem sending your message. Please email info@lamdabuildingdesign.co.uk");
     }
   }

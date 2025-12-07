@@ -17,11 +17,19 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <img src={service.image} alt={service.title} className="w-full h-80 object-cover rounded-xl" />
         <div>
           <h1 className="text-3xl md:text-5xl font-semibold">{service.title}</h1>
-          {service.content.split("\n").map((line, i) => (
-  <p key={i} className="mb-3">
-    {line}
-  </p>
-))}
+          <div
+            className="text-neutral-300"
+            dangerouslySetInnerHTML={{
+              __html: service.content
+                .split("\n")
+                .map((line) =>
+                  line.trim()
+                    ? `<p class="mb-3">${line}</p>`
+                    : ""
+                )
+                .join(""),
+            }}
+          />
 
           <Link href="/contact" className="inline-block mt-8 px-6 py-3 rounded-md bg-[#CFAA4E] text-black hover:bg-[#c29b3c]">Discuss this service</Link>
         </div>

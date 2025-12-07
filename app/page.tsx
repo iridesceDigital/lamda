@@ -1,7 +1,6 @@
 import { Spotlight } from "@/components/ui/spotlight";
 import Link from "next/link";
 import Services from "./services";
-import { Star, House, BadgeCheck } from "lucide-react";
 import { Accordion } from "@/components/ui/accordion";
 import Image from "next/image";
 
@@ -30,7 +29,7 @@ export default function Home() {
               Integrated Building Design and Structural Engineering 
             </h1>
             <p className="mt-6 text-neutral-300 leading-relaxed">
-              Experience a smarter design process. By merging architectural building design and structural engineering, we provide homeowners, developers, and contractors with a single, comprehensive solution that streamlines projects and reduces costs.  Alternatively, we carry can work with others to produce individual packages.  Let's build your vision together.
+              Experience a smarter design process. By merging architectural building design and structural engineering, we provide homeowners, developers, and contractors with a single, comprehensive solution that streamlines projects and reduces costs.  Alternatively, we carry can work with others to produce individual packages.  Let&apos;s build your vision together.
             </p>
             <Link href="/contact" className="inline-block mt-8">
               <button className="px-6 py-3 rounded-md bg-[#CFAA4E] text-black font-medium hover:bg-[#c29b3c] transition-colors">
@@ -44,7 +43,7 @@ export default function Home() {
       {/* About split section */}
       <section className="bg-[#1B1B1B]">
         <div className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-10 items-center">
-          <img src="/images/L1.jpg" alt="Lamda studio" className="w-full h-72 md:h-96 object-cover rounded-xl" />
+          <Image src="/images/L1.jpg" alt="Lamda studio" width={500} height={400} className="w-full h-72 md:h-96 object-cover rounded-xl" />
           <div>
             <h2 className="text-2xl md:text-4xl font-semibold text-white">Integrated Architecture + Engineering</h2>
             <p className="mt-4 text-neutral-300">

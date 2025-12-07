@@ -24,7 +24,7 @@ export const services: Service[] = [
 • Any appeals to planning refusals
 • Responses to consultee comments
 • Retrospective planning applications
-• Even if your planning requirements aren’t on the list, contact us as we are committed to helping you.
+Even if your planning requirements aren’t on the list, contact us as we are committed to helping you.
 `,
     highlights: [
       "Pre-application advice",
@@ -43,7 +43,7 @@ export const services: Service[] = [
     content:
       `Lamda Building Design can lead you through the complexities of the building regulations to ensure the success of your project.
 
-Depending on the nature of your scheme, Building Regulations drawings may be required in addition to any structural calculations (Link to structural engineering); our in-house team can provide support in all areas.
+Depending on the nature of your scheme, Building Regulations drawings may be required in addition to any <a href="/services/structural-engineering" style="color: #CFAA4E; text-decoration: underline;">structural calculations</a>; our in-house team can provide support in all areas.
 
 Building regulations drawings delve into the technical aspects of developments such as thermal capacities of materials, waterproofing and escape routes.  
 
