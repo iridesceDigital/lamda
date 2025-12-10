@@ -26,13 +26,18 @@ export default function ContactPage() {
         body: formData,
       });
 
+      console.log("Response status:", res.status);
+      console.log("Response ok:", res.ok);
+
       if (res.ok) {
         setStatus("Thanks, we'll be in touch shortly.");
         e.currentTarget.reset();
       } else {
+        console.error("Response error:", res.statusText);
         setStatus("There was a problem sending your message. Please try again or email polishgingertom@gmail.com");
       }
     } catch (error) {
+      console.error("Fetch error:", error);
       setStatus("There was a problem sending your message. Please email polishgingertom@gmail.com");
     } finally {
       setIsSubmitting(false);
