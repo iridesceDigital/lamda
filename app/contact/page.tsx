@@ -24,7 +24,7 @@ export default function ContactPage() {
     formData.append("_captcha", "false");
 
     try {
-      const res = await fetch("https://formsubmit.co/polishgingertom@gmail.com", {
+      const res = await fetch("https://formsubmit.co/info@lamdabuildingdesign.co.uk", {
         method: "POST",
         body: formData,
       });
@@ -38,11 +38,11 @@ export default function ContactPage() {
         formEl.reset();
       } else {
         console.error("Response error:", res.statusText);
-        setStatus("There was a problem sending your message. Please try again or email polishgingertom@gmail.com");
+        setStatus("There was a problem sending your message. Please try again or email info@lamdabuildingdesign.co.uk");
       }
     } catch (error) {
       console.error("Fetch error:", error);
-      setStatus("There was a problem sending your message. Please email polishgingertom@gmail.com");
+      setStatus("There was a problem sending your message. Please email info@lamdabuildingdesign.co.uk");
     } finally {
       setIsSubmitting(false);
     }
