@@ -10,14 +10,17 @@ export default function ContactPage() {
     setStatus(null);
     setIsSubmitting(true);
 
-    const data = new FormData(e.currentTarget);
+    // Capture the form element synchronously so we don't rely on the
+    // synthetic event after any await (React may null out the event).
+    const formEl = e.currentTarget as HTMLFormElement;
+    const data = new FormData(formEl);
     const formData = new FormData();
-    formData.append("firstName", data.get("firstName") || "");
-    formData.append("lastName", data.get("lastName") || "");
-    formData.append("company", data.get("company") || "");
-    formData.append("email", data.get("email") || "");
-    formData.append("phone", data.get("phone") || "");
-    formData.append("message", data.get("message") || "");
+    formData.append("firstName", String(data.get("firstName") || ""));
+    formData.append("lastName", String(data.get("lastName") || ""));
+    formData.append("company", String(data.get("company") || ""));
+    formData.append("email", String(data.get("email") || ""));
+    formData.append("phone", String(data.get("phone") || ""));
+    formData.append("message", String(data.get("message") || ""));
     formData.append("_captcha", "false");
 
     try {
@@ -31,7 +34,8 @@ export default function ContactPage() {
 
       if (res.ok) {
         setStatus("Thanks, we'll be in touch shortly.");
-        e.currentTarget.reset();
+        // Use the captured form element rather than the pooled event
+        formEl.reset();
       } else {
         console.error("Response error:", res.statusText);
         setStatus("There was a problem sending your message. Please try again or email polishgingertom@gmail.com");
