@@ -47,7 +47,7 @@ export default function Home() {
           <div>
             <h2 className="text-2xl md:text-4xl font-semibold text-white">Integrated Architecture + Engineering</h2>
             <p className="mt-4 text-neutral-300">
-              We combine creative architectural design with rigorous structural and civil engineering expertise. From concept to completion, we simplify coordination, reduce costs, and improve buildability.
+              We combine creative architectural building design with rigorous structural and civil engineering expertise. From concept to completion, we simplify coordination, reduce costs, and improve buildability.
             </p>
             <div className="mt-6 flex gap-4">
               <Link href="/services" className="underline text-[#CFAA4E]">Explore services</Link>
