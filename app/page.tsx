@@ -29,7 +29,7 @@ export default function Home() {
               Integrated Building Design and Structural Engineering 
             </h1>
             <p className="mt-6 text-neutral-300 leading-relaxed">
-              Experience a smarter design process. By merging architectural building design and structural engineering, we provide homeowners, developers, and contractors with a single, comprehensive solution that streamlines projects and reduces costs.  Alternatively, we carry can work with others to produce individual packages.  Let&apos;s build your vision together.
+              Experience a smarter design process. By merging architectural building design and structural engineering, we provide homeowners, developers, and contractors with a single, comprehensive solution that streamlines projects and reduces costs. Let&apos;s build your vision together.
             </p>
             <Link href="/contact" className="inline-block mt-8">
               <button className="px-6 py-3 rounded-md bg-[#CFAA4E] text-black font-medium hover:bg-[#c29b3c] transition-colors">
